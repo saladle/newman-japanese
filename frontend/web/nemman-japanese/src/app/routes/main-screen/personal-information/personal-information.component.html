@@ -1,1 +1,41 @@
-<p>personal-information works!</p>
+<nz-layout>
+    <nz-content class="outer-content">
+        <nz-breadcrumb>
+            <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+            <nz-breadcrumb-item>Personal-information</nz-breadcrumb-item>
+
+        </nz-breadcrumb>
+        <nz-layout class="inner-layout">
+            <nz-sider nzWidth="200px" nzTheme="light">
+                <ul nz-menu nzMode="inline" class="sider-menu">
+                    <li nz-submenu nzOpen nzTitle="User Info" nzIcon="user">
+                        <ul>
+                            <li nz-menu-item nzSelected><a routerLink="/infor-detail">Infor</a> </li>
+                            <li nz-menu-item><a routerLink="/infor-course">My course</a></li>
+
+                        </ul>
+                    </li>
+                    <!-- <li nz-submenu nzTitle="subnav 2" nzIcon="laptop">
+                        <ul>
+                            <li nz-menu-item>option5</li>
+
+                        </ul>
+                    </li> -->
+                    <!-- <li nz-submenu nzTitle="subnav 3" nzIcon="notification">
+                        <ul>
+                            <li nz-menu-item>option9</li>
+
+                        </ul>
+                    </li> -->
+                </ul>
+            </nz-sider>
+            <nz-content>
+                <div class="inner-content">
+                    <app-infor-detail></app-infor-detail>
+                    <router-outlet></router-outlet>
+                </div>
+            </nz-content>
+        </nz-layout>
+        <nz-footer>New Man ©2022 Japanese learn</nz-footer>
+    </nz-content>
+</nz-layout>

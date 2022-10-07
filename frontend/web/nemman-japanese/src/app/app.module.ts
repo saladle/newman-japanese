@@ -21,7 +21,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { InforCourseComponent } from './routes/main-screen/personal-information/infor-course/infor-course/infor-course.component';
+import { InforDetailComponent } from './routes/main-screen/personal-information/infor-detail/infor-detail/infor-detail.component';
+import { NzSliderModule } from 'ng-zorro-antd/slider';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 registerLocaleData(en);
 
 @NgModule({
@@ -37,6 +44,9 @@ registerLocaleData(en);
     LearnComponent,
     WordListComponent,
     WordDetailComponent,
+    InforCourseComponent,
+    InforDetailComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -44,6 +54,13 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NzLayoutModule,
+    NzBreadCrumbModule,
+    NzMenuModule,
+    NzGridModule,
+    NzSliderModule,
+    NzAvatarModule
+
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
