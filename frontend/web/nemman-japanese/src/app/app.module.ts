@@ -1,3 +1,4 @@
+import { NgZorroAntdModule } from './ng-zorro-antd.module';
 import { WordDetailComponent } from './routes/learn/word-detail/word-detail.component';
 import { WordListComponent } from './routes/learn/word-list/word-list.component';
 import { LearnComponent } from './routes/learn/learn.component';
@@ -44,6 +45,7 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NgZorroAntdModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],

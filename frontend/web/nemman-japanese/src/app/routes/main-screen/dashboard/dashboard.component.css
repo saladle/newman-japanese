@@ -4,7 +4,17 @@
   flex-direction: row;
 }
 
-/* .left-sidebar */
+.left-sidebar {
+  flex-basis: 25%;
+}
+
+.rank__label {
+  margin-top: 12px;
+}
+
+.rank__body {
+  margin: 12px;
+}
 
 .rank-container {
   background-color: antiquewhite;
@@ -15,6 +25,8 @@
 .rank__label {
   /* width: 100%; */
   text-align: center;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .rank__body {
@@ -27,8 +39,63 @@
   flex-direction: row;
   margin: 10px;
   align-items: center;
+  font-size: 16px;
+}
+
+.rank-number {
+  flex-basis: 10%;
+  font-weight: 700;
 }
 
 .user-avatar {
-  /* height: 120px; */
+  flex-basis: 25%;
+  border-radius: 50%;
+}
+
+.user-name {
+  flex-basis: 55%;
+  font-weight: 700;
+}
+
+.user-word {
+  flex-basis: 10%;
+  color: gray;
+}
+
+/* main */
+
+/* achievement-summary */
+
+
+.achievement-summary .achievement__img img {
+  height: 100px;
+  width: 100px;
+}
+
+.achievement-summary .achievement__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.achievement-summary .achievement__detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* day-summary */
+.day-summary__progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.day-summary__progress .progress__line {
+  flex-basis: 70%;
+}
+
+.day-summary__progress .progress__text {
+  flex-basis: 25%;
 }
