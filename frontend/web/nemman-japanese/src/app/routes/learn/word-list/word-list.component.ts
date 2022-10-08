@@ -1,6 +1,7 @@
 import { WordbookService } from './../../../services/wordbook-management/wordbook.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { constant } from 'src/app/utils/constant';
 
 @Component({
   selector: 'app-word-list',
@@ -112,9 +113,17 @@ export class WordListComponent implements OnInit {
   }
 
   async fetchData() {
-    var response = await this.wordbookService
-      .getWordbookById(this.router.snapshot.params.id)
-      .toPromise();
-    this.thisWordBook = response;
+    console.log(this.router.snapshot.params.id);
+    if (this.router.snapshot.params.id) {
+      var response = await this.wordbookService
+        .getWordbookById(this.router.snapshot.params.id)
+        .toPromise();
+      this.thisWordBook = response;
+    } else {
+      var cachedWordBook = localStorage.getItem(constant.CACHE_WORDBOOK_LABEL);
+      if (cachedWordBook) {
+        this.thisWordBook = JSON.parse(cachedWordBook);
+      }
+    }
   }
 }

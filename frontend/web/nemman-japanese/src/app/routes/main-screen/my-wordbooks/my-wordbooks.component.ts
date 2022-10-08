@@ -3,6 +3,7 @@ import { WordbookService } from './../../../services/wordbook-management/wordboo
 import { Component, OnInit } from '@angular/core';
 import { NzMarks } from 'ng-zorro-antd/slider';
 import { Router } from '@angular/router';
+import { constant } from 'src/app/utils/constant';
 interface courseList {
   courseName: string;
   courseContent: string;
@@ -65,5 +66,10 @@ export class MyWordbooksComponent implements OnInit {
     var id = wordBook.id;
     this.router.navigate([`/${staticPath.WORD_LIST}`, { id }]);
     this.wordbookService.setCurrentWordBook(wordBook);
+    this.saveDataCache(constant.CACHE_WORDBOOK_LABEL, wordBook);
+  }
+
+  saveDataCache(label: string, data: any) {
+    localStorage.setItem(label, JSON.stringify(data));
   }
 }

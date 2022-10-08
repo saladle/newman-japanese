@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { constant } from 'src/app/utils/constant';
 
 @Injectable({
   providedIn: 'root',
@@ -20,5 +21,9 @@ export class WordbookService {
 
   setCurrentWordBook(data: any): void {
     this.currentWordBook = data;
+    this.saveDataCache(constant.CACHE_WORDBOOK_LABEL, data);
+  }
+  saveDataCache(label: string, data: any) {
+    localStorage.setItem(label, JSON.stringify(data));
   }
 }
