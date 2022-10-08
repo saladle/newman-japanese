@@ -7,9 +7,41 @@
 }
 
 .grid-config {
-    height: 120px;
+    display: inline-block;
+    height: 150px;
+    width: 335px;
     font-size: 14px;
-    line-height: 120px;
-    background: #0092ff;
+    background: #fff;
     border-radius: 4px;
+    color: #000;
 }
+
+.grid-config:hover {
+    box-shadow: 5px 5px 5px #a59a9a;
+    cursor: pointer;
+}
+
+.course-total {
+    font-size: 12px;
+    opacity: 60%;
+}
+
+.course-title {
+    font-size: 18px;
+}
+
+.course-container {
+    padding: 10px 10px;
+}
+
+.course-author {
+    display: flex;
+    margin-top: 55px;
+}
+
+.course-author__name {
+    padding-left: 5px;
+    align-self: center;
+}
+
+.gutter-row {}
