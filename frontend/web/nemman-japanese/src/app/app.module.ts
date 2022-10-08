@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { InforCourseComponent } from './routes/main-screen/personal-information/infor-course/infor-course/infor-course.component';
 import { InfoDetailComponent } from './routes/main-screen/personal-information/infor-detail/info-detail/info-detail.component';
+import { WordListDetailComponent } from './routes/learn/word-list/word-list-detail/word-list-detail/word-list-detail.component';
 
 registerLocaleData(en);
 
@@ -42,6 +43,8 @@ registerLocaleData(en);
     WordDetailComponent,
     InfoDetailComponent,
     InforCourseComponent,
+    WordListDetailComponent
+
   ],
   imports: [
     BrowserModule,
