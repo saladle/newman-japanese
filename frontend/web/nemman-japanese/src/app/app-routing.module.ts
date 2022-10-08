@@ -10,6 +10,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './routes/main-screen/dashboard/dashboard.component';
 import { MainScreenComponent } from './routes/main-screen/main-screen.component';
 import { NgModule } from '@angular/core';
+import { InfoDetailComponent } from './routes/main-screen/personal-information/infor-detail/info-detail/info-detail.component';
+import { InforCourseComponent } from './routes/main-screen/personal-information/infor-course/infor-course/infor-course.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home/dashboard' },
@@ -23,6 +25,8 @@ const routes: Routes = [
       { path: 'community', component: CommunityComponent },
       { path: 'created-wordbooks', component: CreatedWordbooksComponent },
       { path: 'personal-information', component: PersonalInformationComponent },
+      {path : 'info-detail' , component: InfoDetailComponent},
+      {path : 'infor-course', component: InforCourseComponent}
     ],
   },
   {
@@ -31,6 +35,7 @@ const routes: Routes = [
     children: [
       { path: 'word-list', component: WordListComponent },
       { path: 'word-detail', component: WordDetailComponent },
+
     ],
   },
 ];

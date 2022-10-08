@@ -22,6 +22,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { InfoDetailComponent } from './routes/main-screen/personal-information/infor-detail/info-detail/info-detail.component';
+import { InforCourseComponent } from './routes/main-screen/personal-information/infor-course/infor-course/infor-course.component';
 
 registerLocaleData(en);
 
@@ -38,6 +41,8 @@ registerLocaleData(en);
     LearnComponent,
     WordListComponent,
     WordDetailComponent,
+    InfoDetailComponent,
+    InforCourseComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +51,7 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     NgZorroAntdModule,
+    NzTableModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
