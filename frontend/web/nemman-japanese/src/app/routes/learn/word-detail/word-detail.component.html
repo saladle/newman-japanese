@@ -1,13 +1,18 @@
+<div class="setting-row">
+  <button><i class="fa-solid fa-gear"></i></button>
+</div>
 <div class="detail-lean small-border flc">
   <div class="learn__header">
     <div class="medium-label text-center">Giai đoạn 1: Gieo mầm</div>
     <div class="text-center">Hãy ghi nhớ từ mới</div>
   </div>
   <div class="new-word highlight-border--green text-center">
-    {{ currentWordBook.wordList[0].word }}
+    {{ currentWordBook.wordList[currentWordIndex].word }}
   </div>
   <div>Ý nghĩa:</div>
   <div class="word__meaning highlight-border--blue text-center">
-    {{ currentWordBook.wordList[0].mean }}
+    {{ currentWordBook.wordList[currentWordIndex].mean }}
   </div>
+
+  <button class="next-button" (click)="onClickNext()">Từ tiếp theo</button>
 </div>

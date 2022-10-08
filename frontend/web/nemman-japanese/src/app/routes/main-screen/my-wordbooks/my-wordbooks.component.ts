@@ -1,9 +1,8 @@
-import { staticPath } from './../../../utils/staticPath';
 import { WordbookService } from './../../../services/wordbook-management/wordbook.service';
 import { Component, OnInit } from '@angular/core';
 import { NzMarks } from 'ng-zorro-antd/slider';
 import { Router } from '@angular/router';
-import { constant } from 'src/app/utils/constant';
+import { staticPath } from 'src/app/utils/staticPath';
 interface courseList {
   courseName: string;
   courseContent: string;
@@ -66,7 +65,7 @@ export class MyWordbooksComponent implements OnInit {
     var id = wordBook.id;
     this.router.navigate([`/${staticPath.WORD_LIST}`, { id }]);
     this.wordbookService.setCurrentWordBook(wordBook);
-    this.saveDataCache(constant.CACHE_WORDBOOK_LABEL, wordBook);
+    // this.saveDataCache(constant.CACHE_WORDBOOK_LABEL, wordBook);
   }
 
   saveDataCache(label: string, data: any) {
