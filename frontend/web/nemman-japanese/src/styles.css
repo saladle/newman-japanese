@@ -10,10 +10,26 @@
   --header-with-search-height: calc(var(--header-height) - var(--navbar-height)); */
 }
 
+ /* --------- Border ---------  */
+
 .small-border {
   border-radius: 12px;
   border-style: solid;
   border-color: grey;
+}
+
+.highlight-border--green {
+  border-radius: 12px;
+  border-style: solid;
+  border-color: #52c41a;
+  border-width: 8px;
+}
+
+.highlight-border--blue {
+  border-radius: 12px;
+  border-style: solid;
+  border-color: #1890ff;
+  border-width: 8px;
 }
 
 .divider__solid {
@@ -144,6 +160,8 @@
 
 
  /* --------- Width ---------  */
+
+
  .w-50 {
   width: 50% !important;
  }

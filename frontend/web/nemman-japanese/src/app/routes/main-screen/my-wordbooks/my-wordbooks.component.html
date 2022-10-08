@@ -1,20 +1,30 @@
 <b>Danh sách các khóa học đang học</b>
 <div>
-    Khóa học 1
-    <a routerLink="../../learn/word-detail">Bắt đầu học</a>
-    <div class="learn-list">
-        <div class="gutter-example">
-            <div nz-row [nzGutter]="[hGutter, vGutter]">
-                <div nz-col class="gutter-row" [nzSpan]="24 / count" *ngFor="let i of array">
-                    <div class="grid-config">Column</div>
-                </div>
-                <div nz-col class="gutter-row" [nzSpan]="24 / count" *ngFor="let i of array">
-                    <div class="grid-config">Column</div>
-                </div>
-            </div>
+  Khóa học 1
+  <a routerLink="../../learn/word-detail">Bắt đầu học</a>
+  <div class="learn-list">
+    <div class="gutter-example">
+      <div nz-row [nzGutter]="[hGutter, vGutter]">
+        <div
+          nz-col
+          class="gutter-row"
+          [nzSpan]="24 / count"
+          *ngFor="let i of array"
+        >
+          <div class="grid-config">Column</div>
         </div>
+        <div
+          nz-col
+          class="gutter-row"
+          [nzSpan]="24 / count"
+          *ngFor="let i of array"
+        >
+          <div class="grid-config">Column</div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 <div class="learn-container">
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </div>

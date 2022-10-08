@@ -1,0 +1,13 @@
+
+.detail-lean {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.new-word {
+  font-size: 50px;
+}
+
+.word__meaning {
+  font-size: 50px;
+}
