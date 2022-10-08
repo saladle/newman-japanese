@@ -1,4 +1,6 @@
+import { WordbookService } from './../../../services/wordbook-management/wordbook.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-word-list',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./word-list.component.css'],
 })
 export class WordListComponent implements OnInit {
+  thisWordBook: any;
   listOfData: any = [
     {
       key: '1',
@@ -99,7 +102,19 @@ export class WordListComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(
+    private router: ActivatedRoute,
+    private wordbookService: WordbookService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.fetchData();
+  }
+
+  async fetchData() {
+    var response = await this.wordbookService
+      .getWordbookById(this.router.snapshot.params.id)
+      .toPromise();
+    this.thisWordBook = response;
+  }
 }

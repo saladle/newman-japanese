@@ -3,9 +3,11 @@
     <div class="medium-label text-center">Giai đoạn 1: Gieo mầm</div>
     <div class="text-center">Hãy ghi nhớ từ mới</div>
   </div>
-  <div class="new-word highlight-border--green text-center">こんばんは</div>
+  <div class="new-word highlight-border--green text-center">
+    {{ currentWordBook.wordList[0].word }}
+  </div>
   <div>Ý nghĩa:</div>
   <div class="word__meaning highlight-border--blue text-center">
-    Chào buổi tối
+    {{ currentWordBook.wordList[0].mean }}
   </div>
 </div>

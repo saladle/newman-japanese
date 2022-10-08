@@ -1,6 +1,6 @@
 <nz-table
   #basicTable
-  [nzData]="listOfData"
+  [nzData]="thisWordBook.wordList"
   [nzPageSize]="50"
   [nzScroll]="{ y: '500px' }"
 >
@@ -13,10 +13,10 @@
   </thead>
   <tbody>
     <tr *ngFor="let data of basicTable.data">
-      <td>{{ data.name }}</td>
-      <td>{{ data.age }}</td>
+      <td>{{ data.word }}</td>
+      <td>{{ data.mean }}</td>
       <td>
-        <a>Action 一 {{ data.name }}</a>
+        <a>Action 一 {{ data.word }}</a>
         <nz-divider nzType="vertical"></nz-divider>
         <a>Delete</a>
       </td>
