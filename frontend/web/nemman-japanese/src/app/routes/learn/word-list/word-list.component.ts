@@ -146,7 +146,7 @@ export class WordListComponent implements OnInit {
     private wordbookService: WordbookService
   ) {}
   onClickList(data : any){
-    console.log(data)
+    this.currentData = data ; 
   }
   ngOnInit(): void {
     this.fetchData();

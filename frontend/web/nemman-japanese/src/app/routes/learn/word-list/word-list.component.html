@@ -1,8 +1,13 @@
 <nz-layout>
 
     <div nz-row>
-        <div class="word-detail-container" style="display: flex ; justify-content: center;" nz-col nzSpan="12">
-            <app-word-list-detail style="display: flex ; justify-content: center;"></app-word-list-detail>
+        <div class="word-detail-container" style="display: flex ; justify-content: center; align-self: center;" nz-col nzSpan="12">
+            <app-word-list-detail [dataClick]="currentData" style="display: flex ; justify-content: center;">
+                <div class="Word_footer">
+                    <div class="Word_navigation_back"><i class="fas fa-angle-left"></i></div>
+                    <div class="Word_navigation_up"><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </app-word-list-detail>
         </div>
         <div class="word-detail-container" nz-col nzSpan="12">
 
