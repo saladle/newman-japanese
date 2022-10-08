@@ -1,4 +1,4 @@
-﻿namespace newmanJapanese.Controllers
+﻿namespace JLearning.Entities
 {
     public class usercourse
     {

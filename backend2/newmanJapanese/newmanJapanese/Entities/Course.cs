@@ -1,4 +1,4 @@
-﻿namespace newmanJapanese.Controllers
+﻿namespace JLearning.Entities
 {
     public class Course
     {
@@ -7,8 +7,8 @@
         public string category { set; get; }
         public int level { get; set; }
         public double rating { get; set; }
-        public  int totalUserLearned { get; set; }
+        public int totalUserLearned { get; set; }
         public int totalWord { get; set; }
-       public  int totalWordLearned { set; get; }
+        public int totalWordLearned { set; get; }
     }
 }

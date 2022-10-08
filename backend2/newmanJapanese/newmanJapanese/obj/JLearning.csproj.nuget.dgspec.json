@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dell\\source\\repos\\newmanJapanese\\newmanJapanese\\JLearning.csproj": {}
+    "E:\\Project\\newman-japanese\\backend2\\newmanJapanese\\newmanJapanese\\JLearning.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dell\\source\\repos\\newmanJapanese\\newmanJapanese\\JLearning.csproj": {
+    "E:\\Project\\newman-japanese\\backend2\\newmanJapanese\\newmanJapanese\\JLearning.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dell\\source\\repos\\newmanJapanese\\newmanJapanese\\JLearning.csproj",
+        "projectUniqueName": "E:\\Project\\newman-japanese\\backend2\\newmanJapanese\\newmanJapanese\\JLearning.csproj",
         "projectName": "JLearning",
-        "projectPath": "C:\\Users\\dell\\source\\repos\\newmanJapanese\\newmanJapanese\\JLearning.csproj",
-        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dell\\source\\repos\\newmanJapanese\\newmanJapanese\\obj\\",
+        "projectPath": "E:\\Project\\newman-japanese\\backend2\\newmanJapanese\\newmanJapanese\\JLearning.csproj",
+        "packagesPath": "C:\\Users\\hvd70\\.nuget\\packages\\",
+        "outputPath": "E:\\Project\\newman-japanese\\backend2\\newmanJapanese\\newmanJapanese\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hvd70\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

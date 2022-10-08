@@ -1,9 +1,10 @@
 ﻿using Dapper;
+using JLearning.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MySqlConnector;
-using System;
+using JLearning;
 namespace newmanJapanese.Controllers
 {
     [Route("api/[controller]")]
@@ -16,8 +17,7 @@ namespace newmanJapanese.Controllers
         {
             try
             {
-                string connectionString = "Server=localhost;Port=3306;Database=learning;Uid=root;Pwd=yasuo1234gg";
-                var mySQLconnection = new MySqlConnection(connectionString);
+                var mySQLconnection = new MySqlConnection(Consts.dbConnection);
               
                 string JoinCourse = "insert into usercourses (userId,courseId,totalLearned,lastLearn) values (@userId,@courseId,@totalLearned,@lastLearn)";
                 var parameters = new DynamicParameters();
@@ -58,8 +58,7 @@ namespace newmanJapanese.Controllers
         {
             try
             {
-                string connectionString = "Server=localhost;Port=3306;Database=learning;Uid=root;Pwd=yasuo1234gg";
-                var mySQLconnection = new MySqlConnection(connectionString);
+                var mySQLconnection = new MySqlConnection(Consts.dbConnection);
                 string getCourse = "select courses.courseId as courseId,courses.name as name,category,level,rating,totalUserLearned from courses,usercourses,users where courses.courseId =usercourses.courseId AND users.userId=usercourses.userId AND users.userId='" + userId + "'";
                 IEnumerable<Course> connectDB = mySQLconnection.Query<Course>(getCourse);
                 foreach (var tempI in connectDB)
