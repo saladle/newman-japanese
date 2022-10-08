@@ -8,12 +8,21 @@
   flex-basis: 25%;
 }
 
+.main-content {
+  flex-basis: 75%;
+}
+
 .rank__label {
   margin-top: 12px;
 }
 
 .rank__body {
   margin: 12px;
+}
+
+.rank-container .rank-users__list {
+  overflow: scroll;
+  height: 500px;
 }
 
 .rank-container {
@@ -75,6 +84,7 @@
 .achievement-summary .achievement__list {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .achievement-summary .achievement__detail {
@@ -86,16 +96,17 @@
 
 
 /* day-summary */
-.day-summary__progress {
+.day-summary .day-summary__progress .progress__body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.day-summary__progress .progress__line {
+.day-summary .day-summary__progress .progress__line {
   flex-basis: 70%;
 }
 
-.day-summary__progress .progress__text {
+.day-summary .day-summary__progress .progress__text {
   flex-basis: 25%;
 }
+

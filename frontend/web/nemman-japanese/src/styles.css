@@ -3,6 +3,13 @@
   /* font-family:Arial, Helvetica, sans-serif !important; */
 }
 
+:root {
+  --primary-color: rgb(238, 75, 43);
+  /* --header-height: 120px;
+  --navbar-height: 34px;
+  --header-with-search-height: calc(var(--header-height) - var(--navbar-height)); */
+}
+
 .small-border {
   border-radius: 12px;
   border-style: solid;
@@ -15,10 +22,6 @@
  }
 
  /* --------- Margin, padding ---------  */
- .m-16 {
-  margin: 16px !important;
- }
-
  .m-12 {
   margin: 12px !important;
  }
@@ -59,15 +62,131 @@
   padding-left: 12px !important;
  }
 
+ .m-16 {
+  margin: 16px !important;
+ }
+
+ .mt-16 {
+  margin-top: 16px !important;
+ }
+
+ .mr-16 {
+  margin-right: 16px !important;
+ }
+
+ .mb-16 {
+  margin-bottom: 16px !important;
+ }
+
+ .ml-16 {
+  margin-left: 16px !important;
+ }
+
+ .p-16 {
+  padding: 16px !important;
+ }
+
+ .pt-16 {
+  padding-top: 16px !important;
+ }
+
+ .pr-16 {
+  padding-right: 16px !important;
+ }
+
+ .pb-16 {
+  padding-bottom: 16px !important;
+ }
+
+ .pl-16 {
+  padding-left: 16px !important;
+ }
+
+ .m-24 {
+  margin: 24px !important;
+ }
+
+ .mt-24 {
+  margin-top: 24px !important;
+ }
+
+ .mr-24 {
+  margin-right: 24px !important;
+ }
+
+ .mb-24 {
+  margin-bottom: 24px !important;
+ }
+
+ .ml-24 {
+  margin-left: 24px !important;
+ }
+
+ .p-24 {
+  padding: 24px !important;
+ }
+
+ .pt-24 {
+  padding-top: 24px !important;
+ }
+
+ .pr-24 {
+  padding-right: 24px !important;
+ }
+
+ .pb-24 {
+  padding-bottom: 24px !important;
+ }
+
+ .pl-24 {
+  padding-left: 24px !important;
+ }
+
+
  /* --------- Width ---------  */
+ .w-50 {
+  width: 50% !important;
+ }
+
  .w-80 {
   width: 80% !important;
  }
 
+ .w-100 {
+  width: 100% !important;
+ }
 
  /* --------- Label ---------  */
- .medium-label {
+ .small-label {
   font-size: 16px;
   font-weight: 700;
  }
 
+ .medium-label {
+  font-size: 20px;
+  font-weight: 700;
+ }
+
+ /* --------- Align ---------  */
+.text-center {
+  text-align: center !important;
+}
+
+ /* --------- Flex ---------  */
+.flr {
+  display: flex !important;
+  flex-direction: row;
+}
+
+.flc {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.f-align-stretch {
+  align-items: stretch !important;
+}
+
+/* .ant-progress-status-success .ant-progress-bg {
+  background-color: red;
+} */
