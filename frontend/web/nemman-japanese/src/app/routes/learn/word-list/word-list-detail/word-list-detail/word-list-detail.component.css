@@ -1,0 +1,48 @@
+    .Word_container {
+        align-self: center;
+        width: 450px;
+        height: 325px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+    }
+    
+    .Word_container:hover {
+        box-shadow: 2px 2px 2px #a59a9a;
+        cursor: pointer;
+    }
+    
+    .Word_header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px;
+        opacity: 70%;
+    }
+    
+    .Word_type {}
+    
+    .Word_index {}
+    
+    .word_highligh {}
+    
+    .Word_body {
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        font-weight: 520;
+    }
+    
+    .Word_footer {
+        display: flex;
+        justify-content: space-around;
+        font-size: 35px;
+        opacity: 80%;
+    }
+    
+    .Word_footer :hover {
+        opacity: 50%;
+    }
+    
+    .Word_navigation_back {}
+    
+    .Word_navigation_up {}

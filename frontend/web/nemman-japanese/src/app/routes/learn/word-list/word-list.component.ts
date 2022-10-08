@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+// import { EventEmitter } from 'stream';
+// import React from 'react';
 
 @Component({
   selector: 'app-word-list',
@@ -21,85 +23,124 @@ export class WordListComponent implements OnInit {
     },
     {
       key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
-    },
-    {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
+      name: '改善',
+      age: 'cải tiến',
       address: 'London No. 1 Lake Park',
     },
     {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
-    },
-    {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
+      key: '4',
+      name: '勉強',
+      age: 'học tập',
       address: 'London No. 1 Lake Park',
     },
     {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
-    },
-    {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
+      key: '5',
+      name: '完成',
+      age: 'hoàn thành',
       address: 'London No. 1 Lake Park',
     },
     {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
-    },
-    {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
+      key: '6',
+      name: '賛成',
+      age: 'tán thành',
       address: 'London No. 1 Lake Park',
     },
     {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
-    },
-    {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
+      key: '7',
+      name: 'こんばんは',
+      age: 'chào buổi tối',
       address: 'London No. 1 Lake Park',
     },
     {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
-    },
-    {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
+      key: '8',
+      name: 'こんばんは',
+      age: 'chào buổi tối',
       address: 'London No. 1 Lake Park',
     },
     {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
+      key: '9',
+      name: 'こんばんは',
+      age: 'chào buổi tối',
+      address: 'London No. 1 Lake Park',
     },
+    {
+      key: '10',
+      name: 'こんばんは',
+      age: 'chào buổi tối',
+      address: 'London No. 1 Lake Park',
+    },
+    {
+      key: '11',
+      name: 'こんばんは',
+      age: 'chào buổi tối',
+      address: 'London No. 1 Lake Park',
+    },
+    {
+      key: '12',
+      name: 'こんばんは',
+      age: 'chào buổi tối',
+      address: 'London No. 1 Lake Park',
+    },
+    {
+      key: '13',
+      name: 'こんばんは',
+      age: 'chào buổi tối',
+      address: 'London No. 1 Lake Park',
+    },
+    {
+      key: '14',
+      name: 'こんばんは',
+      age: 'chào buổi tối',
+      address: 'London No. 1 Lake Park',
+    },
+    {
+      key: '15',
+      name: 'こんばんは',
+      age: 'chào buổi tối',
+      address: 'London No. 1 Lake Park',
+    },
+    {
+      key: '16',
+      name: 'こんばんは',
+      age: 'chào buổi tối',
+      address: 'London No. 1 Lake Park',
+    },
+    {
+      key: '17',
+      name: 'こんばんは',
+      age: 'chào buổi tối',
+      address: 'London No. 1 Lake Park',
+    },
+    {
+      key: '18',
+      name: 'こんばんは',
+      age: 'chào buổi tối',
+      address: 'London No. 1 Lake Park',
+    },
+    {
+      key: '19',
+      name: 'こんばんは',
+      age: 'chào buổi tối',
+      address: 'London No. 1 Lake Park',
+    },
+    {
+      key: '20',
+      name: 'こんばんは',
+      age: 'chào buổi tối',
+      address: 'London No. 1 Lake Park',
+    },
+    {
+      key: '21',
+      name: 'こんばんは',
+      age: 'chào buổi tối',
+      address: 'London No. 1 Lake Park',
+    },
+    
   ];
-
+  currentData : any ; 
   constructor() {}
-
+  onClickList(data : any){
+    console.log(data)
+  }
   ngOnInit(): void {}
 }
