@@ -1,35 +1,53 @@
 <nz-layout>
-
-    <div nz-row>
-        <div class="word-detail-container" style="display: flex ; justify-content: center; align-self: center;" nz-col nzSpan="12">
-            <app-word-list-detail [dataClick]="currentData" style="display: flex ; justify-content: center;">
-                <div class="Word_footer">
-                    <div class="Word_navigation_back"><i class="fas fa-angle-left"></i></div>
-                    <div class="Word_navigation_up"><i class="fas fa-chevron-right"></i></div>
-                </div>
-            </app-word-list-detail>
+  <div nz-row>
+    <div
+      class="word-detail-container"
+      style="display: flex; justify-content: center; align-self: center"
+      nz-col
+      nzSpan="12"
+    >
+      <app-word-list-detail
+        [dataClick]="currentData"
+        style="display: flex; justify-content: center"
+      >
+        <div class="Word_footer">
+          <div class="Word_navigation_back">
+            <i class="fas fa-angle-left"></i>
+          </div>
+          <div class="Word_navigation_up">
+            <i class="fas fa-chevron-right"></i>
+          </div>
         </div>
-        <div class="word-detail-container" nz-col nzSpan="12">
-
-            <nz-table #basicTable [nzData]="listOfData" [nzPageSize]="50" [nzScroll]="{ y: '500px' }">
-
-                <thead>
-                    <tr>
-                        <th>Từ mới</th>
-                        <th>Ý nghĩa</th>
-                        <th nzWidth="80px">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let data of basicTable.data" style="cursor: pointer ;" (click)="onClickList(data)">
-                        <td>{{ data?.name }}</td>
-                        <td>{{ data.age }}</td>
-                        <td>
-                            <a>Delete</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </nz-table>
-        </div>
+      </app-word-list-detail>
     </div>
+    <div class="word-detail-container" nz-col nzSpan="12">
+      <nz-table
+        #basicTable
+        [nzData]="currentWordBook.wordList"
+        [nzPageSize]="50"
+        [nzScroll]="{ y: '500px' }"
+      >
+        <thead>
+          <tr>
+            <th>Từ mới</th>
+            <th>Ý nghĩa</th>
+            <th nzWidth="80px">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="let data of basicTable.data"
+            style="cursor: pointer"
+            (click)="onClickList(data)"
+          >
+            <td>{{ data?.word }}</td>
+            <td>{{ data.mean }}</td>
+            <td>
+              <a>Delete</a>
+            </td>
+          </tr>
+        </tbody>
+      </nz-table>
+    </div>
+  </div>
 </nz-layout>

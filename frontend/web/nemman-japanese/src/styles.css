@@ -4,7 +4,8 @@
 }
 
 :root {
-  --primary-color: rgb(238, 75, 43);
+  --primary-color: #52c41a;
+  --secondary-color: #1890ff;
   /* --header-height: 120px;
   --navbar-height: 34px;
   --header-with-search-height: calc(var(--header-height) - var(--navbar-height)); */

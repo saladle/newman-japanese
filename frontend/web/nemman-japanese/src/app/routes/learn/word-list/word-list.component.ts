@@ -10,7 +10,7 @@ import { constant } from 'src/app/utils/constant';
   styleUrls: ['./word-list.component.css'],
 })
 export class WordListComponent implements OnInit {
-  thisWordBook: any;
+  currentWordBook: any;
   listOfData: any = [
     {
       key: '1',
@@ -138,18 +138,18 @@ export class WordListComponent implements OnInit {
       age: 'chào buổi tối',
       address: 'London No. 1 Lake Park',
     },
-    
   ];
-  currentData : any ; 
+  currentData: any;
   constructor(
     private router: ActivatedRoute,
     private wordbookService: WordbookService
   ) {}
-  onClickList(data : any){
-    this.currentData = data ; 
-  }
   ngOnInit(): void {
     this.fetchData();
+    this.onClickList(this.currentWordBook.wordList[0]);
+  }
+  onClickList(data: any) {
+    this.currentData = data;
   }
 
   async fetchData() {
@@ -158,11 +158,11 @@ export class WordListComponent implements OnInit {
       var response = await this.wordbookService
         .getWordbookById(this.router.snapshot.params.id)
         .toPromise();
-      this.thisWordBook = response;
+      this.currentWordBook = response;
     } else {
       var cachedWordBook = localStorage.getItem(constant.CACHE_WORDBOOK_LABEL);
       if (cachedWordBook) {
-        this.thisWordBook = JSON.parse(cachedWordBook);
+        this.currentWordBook = JSON.parse(cachedWordBook);
       }
     }
   }
