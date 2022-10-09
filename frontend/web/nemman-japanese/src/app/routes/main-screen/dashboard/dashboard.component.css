@@ -22,7 +22,7 @@
 
 .rank-container .rank-users__list {
   overflow: scroll;
-  height: 500px;
+  height: 520px;
 }
 
 .rank-container {
@@ -110,3 +110,6 @@
   flex-basis: 25%;
 }
 
+.motivation {
+  font-weight: 600;
+}
