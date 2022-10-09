@@ -1,1 +1,101 @@
-<p>community works!</p>
+<div class="community-container" *ngFor="let course of listCourseCommunity">
+
+    <nz-page-header class="site-page-header">
+        <!--breadcrumb-->
+
+        <!--avatar-->
+        <nz-avatar nz-page-header-avatar nzSrc={{course.avatar}}></nz-avatar>
+
+        <!--title-->
+        <nz-page-header-title>{{course.authorName}}</nz-page-header-title>
+
+        <!--subtitle-->
+        <nz-page-header-subtitle>{{course.headerContent}}</nz-page-header-subtitle>
+
+        <!--tags-->
+        <nz-page-header-tags>
+            <nz-tag [nzColor]="'blue'">Rating : {{course.rating}}</nz-tag>
+        </nz-page-header-tags>
+
+        <!--extra-->
+        <nz-page-header-extra>
+
+
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+                <ul nz-menu>
+                    <li nz-menu-item>1st menu item length</li>
+                    <li nz-menu-item>2nd menu item length</li>
+                    <li nz-menu-item>3rd menu item length</li>
+                </ul>
+            </nz-dropdown-menu>
+        </nz-page-header-extra>
+
+        <!--content-->
+        <nz-page-header-content>
+            <div nz-row>
+                <div class="content">
+                    <p nz-paragraph>
+                        Ant Design interprets the color system into two levels: a system-level color system and a product-level color system.
+                    </p>
+                    <p nz-paragraph>
+                        Ant Design's design team preferred to design with the HSB color model, which makes it easier for designers to have a clear psychological expectation of color when adjusting colors, as well as facilitate communication in teams.
+                    </p>
+                    <div class="content-link">
+                        <a> <span nz-icon nzType="star" nzTheme="outline" alt="start"></span> Rating
+                        </a>
+                        <a>
+                            <span nz-icon nzType="comment" nzTheme="outline" alt="info"></span> Comment
+                        </a>
+                        <a>
+                            <span nz-icon nzType="import" nzTheme="outline" alt="doc"></span> Import to my course
+                        </a>
+                    </div>
+                </div>
+                <div class="content-image">
+                    <div class="grid-config">
+                        <div class="course-container">
+                            <div class="course-title">
+                                課題：
+                            </div>
+                            <div class="course-total">
+                                Total word ：
+                            </div>
+                            <div class="course-author">
+                                <div class="course-image">
+                                    <nz-avatar nzIcon="user"></nz-avatar>
+                                </div>
+                                <div class="course-author__name">
+
+                                </div>
+                            </div>
+                            <div class="course-rating"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nz-page-header-content>
+    </nz-page-header>
+    <nz-divider nzText="Comment" nzOrientation="left"></nz-divider>
+    <div class="comment">
+        <nz-comment nzAuthor="Han Solo" style="padding-left: 60px;">
+            <nz-avatar nz-comment-avatar nzIcon="user" nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+            <nz-comment-content>
+                <p>
+                    We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.
+                </p>
+            </nz-comment-content>
+            <nz-comment-action>
+                <span nz-tooltip nzTitle="Like" nz-icon nzType="like" [nzTheme]="likes > 0 ? 'twotone' : 'outline'" (click)="like()"></span>
+                <span class="count like">{{ likes }}</span>
+            </nz-comment-action>
+            <nz-comment-action>
+                <span nz-tooltip nzTitle="Dislike" nz-icon nzType="dislike" [nzTheme]="dislikes > 0 ? 'twotone' : 'outline'" (click)="dislike()"></span>
+                <span class="count dislike">{{ dislikes }}</span>
+            </nz-comment-action>
+            <nz-comment-action>Reply to</nz-comment-action>
+        </nz-comment>
+        <div style="padding-left: 100px;">
+            <textarea nz-input placeholder="Comment" nzAutosize></textarea>
+        </div>
+    </div>
+</div>
