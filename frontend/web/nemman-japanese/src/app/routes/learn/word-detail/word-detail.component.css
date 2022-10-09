@@ -11,10 +11,12 @@
 
 .new-word {
   font-size: 50px;
+  padding: 12px;
 }
 
 .word__meaning {
   font-size: 50px;
+  padding: 12px;
 }
 
 .next-button {
@@ -40,7 +42,7 @@
 }
 
 .learn__confirm {
-  height: 200px;
+  height: 120px;
   display: flex;
   align-items: flex-end;
 }

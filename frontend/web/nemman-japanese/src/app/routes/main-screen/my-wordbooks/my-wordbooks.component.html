@@ -1,11 +1,10 @@
 <nz-layout>
   <nz-content>
-    <b>Danh sách các khóa học đang học</b>
+    <b class="medium-label m-24 p-24">Danh sách các khóa học đang học</b>
     <div>
-      Khóa học 1
       <div class="learn-list">
         <div class="gutter-example">
-          <label for="">Gần đây</label>
+          <label class="small-label p-24 m-24" for="">Gần đây</label>
           <div nz-row [nzGutter]="[hGutter, vGutter]" style="padding: 85px">
             <div
               nz-col
@@ -21,7 +20,7 @@
                       課題： {{ wordBookDetail.name }}
                     </div>
                     <div class="course-total">
-                      Total word ： {{ wordBookDetail.name }}
+                      Total word ： {{ wordBookDetail.wordList.length }}
                     </div>
                     <div class="course-author">
                       <div class="course-image">

@@ -1,1 +1,104 @@
-<p>analysis works!</p>
+<div class="main-content m-12">
+  <div class="achievement-summary small-border mt-12 p-12 w-100">
+    <div class="achievement-summary__label medium-label text-center mb-16">
+      Thành tựu
+    </div>
+    <div class="achievement__list">
+      <div
+        class="achievement__detail"
+        *ngFor="let achievement of listAchievement"
+      >
+        <div class="achievement__img">
+          <img [src]="achievement.imageUrl" alt="" />
+        </div>
+        <div class="achievement__name small-label">
+          {{ achievement.name }}
+        </div>
+        <div class="achievement__date">{{ achievement.date }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="summary-row-first flr mt-24">
+    <div class="day-summary small-border p-12 w-50 mr-12">
+      <div class="day-summary__header">
+        <div class="day-summary__label medium-label">
+          Tổng kết từ vựng hôm nay
+        </div>
+      </div>
+      <div class="day-summary__body">
+        <div class="day-summary__progress">
+          <div class="progress__header small-label">Mục tiêu</div>
+          <div class="progress__detail">
+            Bạn đã hoàn thành 25% mục tiêu hôm nay
+          </div>
+          <div class="progress__body">
+            <nz-progress
+              class="progress__line w-80"
+              [nzPercent]="50 / 2"
+              [nzShowInfo]="false"
+            ></nz-progress>
+            <div class="progress__text">12/50 từ</div>
+          </div>
+        </div>
+        <div class="day-summary__efficiency">
+          <div class="efficiency__header small-label">Hiệu suất</div>
+        </div>
+        <div class="efficiency__body flr">
+          <div class="body__graph mr-12">
+            <nz-progress
+              nz-tooltip
+              nzTitle="3 done / 3 in progress / 4 to do"
+              nzType="dashboard"
+              [nzPercent]="60"
+              [nzSuccessPercent]="30"
+            ></nz-progress>
+          </div>
+          <div class="body__description ml-12">
+            <div nz-row nzGutter="8">
+              <div nz-col nzSpan="4">
+                <nz-progress
+                  class="graph__detail--blue w-50"
+                  [nzPercent]="99"
+                  [nzShowInfo]="false"
+                ></nz-progress>
+              </div>
+              <div nz-col nzSpan="20">Số từ đã học hôm qua</div>
+            </div>
+
+            <div nz-row nzGutter="8">
+              <div nz-col nzSpan="4">
+                <nz-progress
+                  class="w-50"
+                  [nzPercent]="100"
+                  [nzShowInfo]="false"
+                ></nz-progress>
+              </div>
+              <div nz-col nzSpan="20">Số từ đã học hôm nay</div>
+            </div>
+          </div>
+        </div>
+        <div class="motivation mt-12">
+          <p>
+            Chỉ cần học thêm 12 từ nữa bạn sẽ chiến thắng bản thân mình của ngày
+            hôm qua.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="week-summary small-border p-12 w-50 ml-12">
+      <div class="week-summary__header">
+        <div class="week-summary__label medium-label">
+          Tổng kết từ vựng 7 ngày gần nhất
+        </div>
+      </div>
+      <div class="week-summary__body">
+        <div class="week-summary__progress">
+          <nz-progress [nzPercent]="50" [nzShowInfo]="false"></nz-progress>
+        </div>
+        Bạn đã học được nhiều hơn 15 từ
+      </div>
+    </div>
+  </div>
+</div>

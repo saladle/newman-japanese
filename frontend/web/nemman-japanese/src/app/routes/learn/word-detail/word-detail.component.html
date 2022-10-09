@@ -16,10 +16,12 @@
     <div class="text-center">Hãy ghi nhớ từ mới</div>
   </div>
   <div class="learn__body">
+    <div class="mt-24 mb-12 small-label">Từ mới:</div>
+
     <div class="new-word highlight-border--green text-center">
       {{ listSortedWord[currentWordIndex].word }}
     </div>
-    <div>Ý nghĩa:</div>
+    <div class="mt-24 mb-12 small-label">Ý nghĩa:</div>
     <div
       *ngIf="isShowResult || !hideResultMode"
       class="word__meaning highlight-border--blue text-center"
