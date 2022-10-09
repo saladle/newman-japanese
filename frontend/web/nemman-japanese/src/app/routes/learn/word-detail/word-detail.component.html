@@ -20,49 +20,104 @@
       {{ listSortedWord[currentWordIndex].word }}
     </div>
     <div>Ý nghĩa:</div>
-    <div class="word__meaning highlight-border--blue text-center">
+    <div
+      *ngIf="isShowResult || !hideResultMode"
+      class="word__meaning highlight-border--blue text-center"
+    >
       {{ listSortedWord[currentWordIndex].mean }}
+    </div>
+    <div
+      *ngIf="!isShowResult && hideResultMode"
+      class="word__meaning highlight-border--blue text-center"
+    >
+      ...
     </div>
   </div>
 
   <div class="learn__confirm">
-    <div nz-row nzJustify="center" class="reaction__list mb-16">
-      <div nz-col nzSpan="3" class="reaction__detail">
-        <button
-          nz-button
-          nzType="primary"
-          class="reaction__button reaction__button--zero"
-          nzDanger
-        >
-          Chưa nhớ
-        </button>
+    <div nz-row *ngIf="autoReview" class="reaction__list text-center">
+      <div
+        nz-row
+        nzJustify="center"
+        *ngIf="!isShowResult && hideResultMode"
+        class="reaction__list mb-16"
+      >
+        <div nz-col nzSpan="3" class="reaction__detail">
+          <button
+            nz-button
+            nzType="primary"
+            class="reaction__button reaction__button--zero"
+          >
+            Hiện đáp án
+          </button>
+        </div>
       </div>
-      <div nz-col nzSpan="3" class="reaction__detail">
-        <button
-          nz-button
-          nzType="primary"
-          class="reaction__button reaction__button--hard"
-        >
-          Khó nhớ
-        </button>
+    </div>
+    <div nz-row *ngIf="!autoReview" class="reaction__list text-center">
+      <div
+        nz-row
+        nzJustify="center"
+        *ngIf="isShowResult || !hideResultMode"
+        class="reaction__list mb-16"
+      >
+        <div nz-col nzSpan="3" class="reaction__detail">
+          <button
+            nz-button
+            nzType="primary"
+            class="reaction__button reaction__button--zero"
+            (click)="onClickReaction(listSortedWord[currentWordIndex].id, 1)"
+            nzDanger
+          >
+            Chưa nhớ
+          </button>
+        </div>
+        <div nz-col nzSpan="3" class="reaction__detail">
+          <button
+            nz-button
+            nzType="primary"
+            class="reaction__button reaction__button--hard"
+            (click)="onClickReaction(listSortedWord[currentWordIndex].id, 2)"
+          >
+            Khó nhớ
+          </button>
+        </div>
+        <div nz-col nzSpan="3" class="reaction__detail">
+          <button
+            nz-button
+            nzType="primary"
+            class="reaction__button reaction__button--easy"
+            (click)="onClickReaction(listSortedWord[currentWordIndex].id, 3)"
+          >
+            Dễ nhớ
+          </button>
+        </div>
+        <div nz-col nzSpan="3" class="reaction__detail">
+          <button
+            nz-button
+            nzType="primary"
+            class="reaction__button reaction__button--done"
+            (click)="onClickReaction(listSortedWord[currentWordIndex].id, 4)"
+          >
+            Đã thuộc lòng
+          </button>
+        </div>
       </div>
-      <div nz-col nzSpan="3" class="reaction__detail">
-        <button
-          nz-button
-          nzType="primary"
-          class="reaction__button reaction__button--easy"
-        >
-          Dễ nhớ
-        </button>
-      </div>
-      <div nz-col nzSpan="3" class="reaction__detail">
-        <button
-          nz-button
-          nzType="primary"
-          class="reaction__button reaction__button--done"
-        >
-          Đã thuộc lòng
-        </button>
+      <div
+        nz-row
+        nzJustify="center"
+        *ngIf="!isShowResult && hideResultMode"
+        class="reaction__list mb-16"
+      >
+        <div nz-col nzSpan="3" class="reaction__detail">
+          <button
+            nz-button
+            nzType="primary"
+            (click)="onClickShowResult()"
+            class="reaction__button reaction__button--zero"
+          >
+            Hiện đáp án
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -93,15 +148,6 @@
       </div>
     </div>
   </nz-dropdown-menu> -->
-
-  <nz-dropdown-menu #settindgMenu="nzDropdownMenu">
-    <div class="reaction__header">Đánh giá mức độ hiểu của bạn</div>
-    <div nz-row class="reaction__list">
-      <div class="reaction__detail">
-        <button></button>
-      </div>
-    </div>
-  </nz-dropdown-menu>
 
   <nz-dropdown-menu #settingMenu="nzDropdownMenu">
     <div class="setting-menu__container small-border p-12">

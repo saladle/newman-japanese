@@ -19,6 +19,10 @@ export class WordbookService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
+  updateWorkBook(id: any, data: any) {
+    return this.http.put(`${this.baseUrl}/${id}`, data);
+  }
+
   setCurrentWordBook(data: any): void {
     this.currentWordBook = data;
     this.saveDataCache(constant.CACHE_WORDBOOK_LABEL, data);

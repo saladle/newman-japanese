@@ -1,3 +1,4 @@
+import { WordListComponent } from './../word-list/word-list.component';
 import { WordbookService } from './../../../services/wordbook-management/wordbook.service';
 import { Component, OnInit } from '@angular/core';
 import { constant } from 'src/app/utils/constant';
@@ -9,10 +10,12 @@ import { constant } from 'src/app/utils/constant';
 })
 export class WordDetailComponent implements OnInit {
   currentWordBook: any;
+  editingWordBook: any;
   currentWordIndex: number = 0;
   listSortedWord: any[] = [];
   hideResultMode: boolean = true;
   autoReview: boolean = false;
+  isShowResult: boolean = false;
   date: any = new Date().toISOString();
   constructor(private wordbookService: WordbookService) {}
 
@@ -28,9 +31,8 @@ export class WordDetailComponent implements OnInit {
     } else {
       this.currentWordBook = this.wordbookService.currentWordBook;
     }
+    this.editingWordBook = Object.assign([], this.currentWordBook);
     this.getListSorted();
-    console.log('huyfew:' + this.currentWordBook);
-    console.log(this.currentWordBook);
 
     this.listSortedWord = this.currentWordBook.wordList.sort(
       (n1: any, n2: any) => {
@@ -60,7 +62,31 @@ export class WordDetailComponent implements OnInit {
     });
   }
 
+  // updateWordBook() {
+  //   this.wordbookService.updateWorkBook(this.currentWordBook.id);
+  // }
+
+  async onClickReaction(wordId: any, level: number) {
+    this.editingWordBook.wordList.forEach((element: any) =>
+      console.log(element.id)
+    );
+    var thisWord = this.editingWordBook.wordList.findIndex(
+      (element: any) => element.id == wordId
+    );
+    console.log(thisWord);
+    this.currentWordIndex++;
+    this.isShowResult = false;
+  }
+
   onClickNext() {
     this.currentWordIndex++;
+  }
+
+  onClickShowResult() {
+    if (this.isShowResult) {
+      this.isShowResult = false;
+    } else {
+      this.isShowResult = true;
+    }
   }
 }
